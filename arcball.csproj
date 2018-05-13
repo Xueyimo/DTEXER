@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82EA8306-0E57-43AA-903B-955EBD58F827}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>arcball</RootNamespace>
+    <AssemblyName>arcball</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="csgl, Version=1.4.1.0, Culture=neutral, PublicKeyToken=d8fb3bdb88c36cd4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\csgl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="arcball.cs" />
+    <Compile Include="model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="model.Designer.cs">
+      <DependentUpon>model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net_Analysis .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net_Analysis .Designer.cs">
+      <DependentUpon>Net_Analysis .cs</DependentUpon>
+    </Compile>
+    <Compile Include="csgl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="csgl.Designer.cs">
+      <DependentUpon>csgl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showplt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showplt.Designer.cs">
+      <DependentUpon>showplt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid_division_2d.cs" />
+    <Compile Include="List.cs" />
+    <Compile Include="Grid_division.cs" />
+    <Compile Include="Mode.cs" />
+    <Compile Include="Model2d.cs" />
+    <Compile Include="model3d.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Set_step.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Set_step.Designer.cs">
+      <DependentUpon>Set_step.cs</DependentUpon>
+    </Compile>
+    <Compile Include="util.cs" />
+    <EmbeddedResource Include="model.resx">
+      <DependentUpon>model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net_Analysis .resx">
+      <DependentUpon>Net_Analysis .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="csgl.resx">
+      <DependentUpon>csgl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showplt.resx">
+      <DependentUpon>showplt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Set_step.resx">
+      <DependentUpon>Set_step.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
